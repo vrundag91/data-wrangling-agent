@@ -6,23 +6,19 @@
 ![Track](https://img.shields.io/badge/Track-Enterprise_Agents-purple?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Hackathon_Submission-success?style=flat-square)
 
----
-
-### Contest Details
+## Contest Details
 This project was built for the **Google AI Agents Intensive Hackathon (2025)**.
 * **Contest URL:** [Kaggle Competition Page](https://www.kaggle.com/competitions/agents-intensive-capstone-project)
 * **Track:** Enterprise Agents
 
----
-
-### The Problem
+## The Problem
 Data Scientists spend **80% of their time cleaning data** instead of analyzing it.
 Most companies try to fix this with standard coding scripts, but this fails because:
 1.  **It takes too long:** Fixing thousands of files manually is impossible.
 2.  **Scripts break easily:** If the date format changes from "DD-MM-YYYY" to "MM-DD-YYYY", a normal script crashes.
 3.  **Human Error:** People get tired and make mistakes.
 
-### The Solution
+## The Solution
 We built **CleanStream AI**. It is an automated team of "AI Employees" (Agents) that act as your personal Data Steward.
 
 You simply give it a folder full of messy files (Healthcare, Sales, HR, etc.). The AI will:
@@ -33,7 +29,7 @@ You simply give it a folder full of messy files (Healthcare, Sales, HR, etc.). T
 
 All of this happens automatically, without you typing a single line of code.
 
-### Core Concepts and Technology
+## Core Concepts and Technology
 
 We used specific AI concepts to solve the problems listed above.
 
@@ -51,7 +47,7 @@ We used specific AI concepts to solve the problems listed above.
 
 - Why? It is optimized for speed and coding. Since we process batches of files, we need an AI that thinks fast and writes accurate Python code.
 
-### Architecture
+## Architecture
 
 Here is how the data flows through our system.
 
@@ -63,7 +59,38 @@ The Workflow:
 - Reviewer Agent: It compares the old file and the new file. It assigns a quality score (0 to 100) to ensure the job was done right.
 - Output: You get clean files and a PDF report.
 
-### Try this agent!
+```mermaid
+graph TD
+    %% Nodes
+    User([👤 User Input])
+    Data[📂 Batch Raw CSVs]
+    
+    subgraph "CleanStream AI System"
+        Analyst(🕵️ Analyst Agent<br/><i>Diagnose Issues</i>)
+        Coder(👨‍💻 Coder Agent<br/><i>Write & Run Python</i>)
+        Reviewer(⚖️ Reviewer Agent<br/><i>Validate & Score</i>)
+        Tool[🛠️ Code Execution Tool]
+    end
+    
+    Output[📂 Clean CSVs]
+    Report[📊 HTML/PDF Dashboard]
+
+    %% Connections
+    User --> Data
+    Data --> Analyst
+    Analyst -->|List of Errors| Coder
+    Coder <-->|Execute Fix| Tool
+    Coder -->|Fixed Data| Reviewer
+    Reviewer -->|Quality Score| Output
+    Reviewer -->|Audit Log| Report
+
+    %% Styling
+    style Analyst fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Coder fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Reviewer fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    style Tool fill:#f3e5f5,stroke:#7b1fa2,stroke-dasharray: 5 5
+
+## Try this agent!
 
 Follow these steps to get the agent running on your computer.
 
@@ -95,11 +122,9 @@ Follow these steps to get the agent running on your computer.
 
     python main.py
 
----
 
 ## Highlight: Check out the Dashboard
 
----
 
 This project includes an interactive **Impact Report**. This report serves as a `Flight Recorder` proving exactly what actions the AI performed on your data.
 
@@ -131,19 +156,17 @@ To visualize the impact clearly, the dashboard generates two key charts for ever
 
 Below the charts, the dashboard provides a generated text summary. It calculates the exact percentage of improvement (e.g., "The agent removed 100% of missing values"). This allows non-technical stakeholders to understand the value of the automation immediately.
 
----
 
-### Conclusion
+## Conclusion
 
 CleanStream AI demonstrates that autonomous agents are ready to solve real enterprise problems. By combining the reasoning power of Google Gemini with actual code execution tools, we transformed a slow, manual chore into a fast, reliable workflow. This project proves that AI can act as a trustworthy partner in managing data infrastructure.
 
----
-
-### About the Author
+## About the Author
 
 Vrunda Gadesha is a writer and technology enthusiast focused on simplifying complex AI concepts. She explores the intersection of storytelling and Deep Learning, helping readers understand the practical applications of Large Language Models.
 
 - **Portfolio:** [View Articles](https://www.ibm.com/think/author/vrunda-gadesha)
 - **LinkedIn:** [Connect with Vrunda](https://www.linkedin.com/in/vrunda-gadesha)
 - **Newsletter:** [The Deep Think Bulletin](https://www.linkedin.com/newsletters/7349767581655846914/)
+
 
