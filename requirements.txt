@@ -1,0 +1,6 @@
+kagglehub
+pandas
+langchain
+langchain-community
+pydantic
+langchain-google-genai
