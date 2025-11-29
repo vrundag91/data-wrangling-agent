@@ -89,6 +89,7 @@ graph TD
     style Coder fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     style Reviewer fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
     style Tool fill:#f3e5f5,stroke:#7b1fa2,stroke-dasharray: 5 5
+```
 
 ## Try this agent!
 
@@ -168,5 +169,6 @@ Vrunda Gadesha is a writer and technology enthusiast focused on simplifying comp
 - **Portfolio:** [View Articles](https://www.ibm.com/think/author/vrunda-gadesha)
 - **LinkedIn:** [Connect with Vrunda](https://www.linkedin.com/in/vrunda-gadesha)
 - **Newsletter:** [The Deep Think Bulletin](https://www.linkedin.com/newsletters/7349767581655846914/)
+
 
 
